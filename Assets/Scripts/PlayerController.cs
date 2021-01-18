@@ -101,7 +101,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 			items[itemIndex].Use();
 		}
 
-		if(transform.position.y < -10f) // Die if you fall out of the world
+        if (Input.GetMouseButtonUp(0))
+        {
+            items[itemIndex].StopUsing();
+        }
+
+        if (transform.position.y < -10f) // Die if you fall out of the world
 		{
 			Die();
 		}
@@ -112,6 +117,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		transform.Rotate(Vector3.up * Input.GetAxisRaw("Mouse X") * mouseSensitivity);
 
 		verticalLookRotation += Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
+
 		verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
 
 		cameraHolder.transform.localEulerAngles = Vector3.left * verticalLookRotation;

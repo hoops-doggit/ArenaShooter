@@ -4,19 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class SingleShotGun : Gun
+public class AutomaticGun : Gun
 {
+    [Header("Boring Stuff")]
 	[SerializeField] Camera cam;
     [SerializeField] PlayerController player;
-    [SerializeField] GameObject bulletFlash;
     [SerializeField] AudioManager audio;
-    [SerializeField] RecoilController recoil;
-    [SerializeField] Vector3 recoilAmount;
-    [SerializeField] float cooldownTime = 0.5f;
+
+    [Header("Customization")]
+    [SerializeField] GameObject bulletFlash;
+    [SerializeField] float timeBetweenBullets = 0.01f;
+
+    [Header("Recoil Settings")]
+    [SerializeField] RecoilController recoilControl;
+    [SerializeField] Vector3 recoilAmount = new Vector3(3,3,3);
 
     PhotonView PV;
-
-    bool gunReady = true;
+    bool canShoot = true;
+    bool shooting = false;
 
     private void Awake()
     {
@@ -25,21 +30,32 @@ public class SingleShotGun : Gun
 
     public override void Use()
 	{
-        if (gunReady)
-        {
-		    Shoot();
-        }
+        shooting = true;
 	}
 
     public override void StopUsing()
     {
-        //
+        shooting = false;
+        Debug.Log("up");
+    }
+
+    private void Update()
+    {
+        if (shooting)
+        {
+            if (canShoot)
+            {
+                Shoot();
+            }
+        }
     }
 
     void Shoot()
 	{
 		Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
 		ray.origin = cam.transform.position;
+        //GameObject bulletImpact = Instantiate(bulletImpactPrefab, ray.origin, Quaternion.identity);
+        //bulletImpact.name = "origin";
 
         if (Physics.Raycast(ray, out RaycastHit hit))
 		{
@@ -47,43 +63,43 @@ public class SingleShotGun : Gun
             PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
 		}
 
-        if (PV.IsMine)
-        {
-            player.BulletFlash(player.GetComponent<PlayerController>().GetItemIndex());
-            audio.PlaySound(audio.playerFirePistol[0], 1.2f, 1.5f);
-            gunReady = false;
-            StartCoroutine(ShootCooldown());
-        }
-    }
+        audio.PlaySound(audio.playerFireAR[0], 1, 1.5f);
+
+        BulletFlash();
+
+        canShoot = false;
+
+        StartCoroutine(ShootCooldown());
+	}
 
     IEnumerator ShootCooldown()
     {
-        yield return new WaitForSeconds(cooldownTime);
-        gunReady = true;
+        yield return new WaitForSeconds(timeBetweenBullets);
+        canShoot = true;
     }
+
+
 
     [PunRPC]
     void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal)
     {
         Collider[] colliders = Physics.OverlapSphere(hitPosition, 0.3f);
-
         if(colliders.Length != 0)
         {
             GameObject bulletImpact = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
             Destroy(bulletImpact, 10f);
             bulletImpact.transform.SetParent(colliders[0].transform);
-        }
-        if (!PV.IsMine)
-        {
-            player.BulletFlash(player.GetComponent<PlayerController>().GetItemIndex());
+
+            if (!PV.IsMine)
+            {
+                player.BulletFlash(player.GetComponent<PlayerController>().GetItemIndex());
+                audio.PlaySound(audio.playerFireAR[0], 1, 1.5f);
+            }
         }
     }
 
     public void BulletFlash()
     {
-        Vector3 rotation = bulletFlash.transform.eulerAngles;
-        rotation.z += Random.Range(-360, 360);
-        bulletFlash.transform.rotation = Quaternion.Euler(rotation);
         bulletFlash.SetActive(true);
         StartCoroutine(TurnOffBulletFlash());
     }

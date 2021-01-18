@@ -35,6 +35,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 		if(PV.IsMine)
 		{
 			CreateController();
+            Cursor.lockState = CursorLockMode.Locked;
 
             //AddPlayerStats(PVViewID);
         }        
@@ -65,75 +66,20 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         CreateController();
     }
 
-    //[PunRPC]
-    //void RPC_UpdateScores(int killerViewID)
-    //{
-    //    for (int i = 0; i < players.Count; i++)
-    //    {
-    //        if (players[i].viewID == killerViewID)
-    //        {
-    //            players[i].score ++;
-
-    //            if(PV.ViewID == killerViewID)
-    //            {
-    //                pStats.score++;
-    //            }
-    //        }
-    //    }
-    //}
-
-    //void AddPlayerStats(int ViewID)
-    //{
-    //    Debug.Log("mine =" + PV.ViewID);
-    //    Debug.Log("incoming" + ViewID);
-
-    //    bool alreadyAdded = false;
-
-    //    for (int i = 0; i < players.Count; i++)
-    //    {
-    //        if (players[i].viewID == ViewID)
-    //        {
-    //            alreadyAdded = true;
-    //        }
-    //    }
-
-    //    if (!alreadyAdded)
-    //    {
-    //        if(ViewID == PVViewID)
-    //        {
-    //            pStats = GetComponent<PlayerStats>();
-
-    //            pStats.playerName = PV.Owner.NickName;
-    //            pStats.viewID = PV.ViewID;
-
-    //            players.Add(pStats);
-
-    //            //after adding self to list, tell everyone you're here
-    //            Hashtable hash = new Hashtable();
-    //            hash.Add("addPlayer", PVViewID);
-    //            PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
-    //        }
-
-    //        else
-    //        {
-    //            PlayerStats newPS = (PlayerStats)gameObject.AddComponent(typeof(PlayerStats));
-
-    //            PlayerStats otherPlayer = PhotonView.Find(ViewID).gameObject.GetComponent<PlayerStats>();
-
-    //            newPS.playerName = otherPlayer.playerName;
-
-    //            newPS.viewID = ViewID;
-
-    //            players.Add(newPS);
-                
-
-    //            //after adding someone tell them to add you back, just in case you got here before them
-    //            Hashtable hash = new Hashtable();
-    //            hash.Add("addPlayer", PVViewID);
-    //            PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
-    //        }
-    //    }        
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
+    }
 
     void SomeoneGotAKill(int killerVID)
     {
@@ -155,11 +101,6 @@ public class PlayerManager : MonoBehaviourPunCallbacks
             //this is for updating local data from others
             SomeoneGotAKill((int)changedProps["killer"]);
         }
-
-        //if (changedProps.ContainsKey("addPlayer"))
-        //{
-        //    AddPlayerStats((int)changedProps["addPlayer"]);
-        //}
 
         if (changedProps.ContainsKey("killer"))
         {

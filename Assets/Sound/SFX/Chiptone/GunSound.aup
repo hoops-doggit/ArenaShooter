@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="GunSound_data" version="1.3.0" audacityversion="2.3.3" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="3139.7161744818" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="Gun01" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="7435">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808c6c.au" len="7435" min="-0.552429" max="0.463715" rms="0.135918"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="2">
+				<controlpoint t="0.055315334871" val="1.000000000000"/>
+				<controlpoint t="0.097386152942" val="0.154929578304"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Gun02" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="7435">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808d5f.au" len="7435" min="-0.432341" max="0.43738" rms="0.171634"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="4">
+				<controlpoint t="0.039344005788" val="1.500000000000"/>
+				<controlpoint t="0.116084294307" val="1.246478915215"/>
+				<controlpoint t="0.153480577036" val="0.514084517956"/>
+				<controlpoint t="0.163998281554" val="0.542253494263"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Gun03" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="0.707946" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="589">
+				<waveblock start="0">
+					<simpleblockfile filename="e080825a.au" len="589" min="-0.131896" max="0.134798" rms="0.039807"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.005096002030" val="0.098591566086"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+</project>
