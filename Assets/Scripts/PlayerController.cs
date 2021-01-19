@@ -264,8 +264,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             PhotonNetwork.LocalPlayer.SetCustomProperties(hash);            
         }
 
-        SingleShotGun g = (SingleShotGun)items[_itemIndex];
-        g.BulletFlash();
+        if ((SingleShotGun)items[_itemIndex])
+        {
+            SingleShotGun g = (SingleShotGun)items[_itemIndex];
+            g.BulletFlash();
+        }
+        else if ((AutomaticGun)items[_itemIndex])
+        {
+            AutomaticGun g = (AutomaticGun)items[_itemIndex];
+            g.BulletFlash();
+        }        
     }
 
 }
