@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
-    public List<PlayerController> players = new List<PlayerController>();
-    Vector3 jumpPadForce = new Vector3(0, 15, 0);
+    List<PlayerController> players = new List<PlayerController>();
+    public float upForce = 15;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +29,8 @@ public class JumpPad : MonoBehaviour
         {
             foreach(PlayerController p in players)
             {
+                Vector3 jumpPadForce = Vector3.up * upForce;
+
                 p.AddForce(jumpPadForce);
             }
         }
