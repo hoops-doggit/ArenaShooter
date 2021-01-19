@@ -276,4 +276,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         }        
     }
 
+    public void AddForce(Vector3 force)
+    {
+        rb.AddForce(force);
+    }
+
 }

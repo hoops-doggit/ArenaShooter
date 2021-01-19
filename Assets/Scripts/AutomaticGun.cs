@@ -100,6 +100,9 @@ public class AutomaticGun : Gun
 
     public void BulletFlash()
     {
+        Vector3 rotation = bulletFlash.transform.localEulerAngles;
+        rotation.z += Random.Range(-360, 360);
+        bulletFlash.transform.localEulerAngles = rotation;
         bulletFlash.SetActive(true);
         StartCoroutine(TurnOffBulletFlash());
     }

@@ -5,8 +5,6 @@ using Photon.Pun;
 
 public class AudioManager : MonoBehaviour
 {
-    public bool playMusicAtStart = false;
-    public bool musicPlaying;
 
     [Header("Audio Clips")]
     public AudioClip[] playerFireAR;
