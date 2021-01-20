@@ -217,10 +217,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		if(!PV.IsMine)
 			return;
 
-		currentHealth -= damage;
+		currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
 
 		if(currentHealth <= 0)
-        { 
+        {            
             Die(photonViewID);
         }
     }
@@ -264,12 +264,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             PhotonNetwork.LocalPlayer.SetCustomProperties(hash);            
         }
 
-        if ((SingleShotGun)items[_itemIndex])
+        if (items[_itemIndex] is SingleShotGun)
         {
             SingleShotGun g = (SingleShotGun)items[_itemIndex];
             g.BulletFlash();
         }
-        else if ((AutomaticGun)items[_itemIndex])
+        else if (items[_itemIndex] is AutomaticGun)
         {
             AutomaticGun g = (AutomaticGun)items[_itemIndex];
             g.BulletFlash();

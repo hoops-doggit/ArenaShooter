@@ -63,7 +63,7 @@ public class AutomaticGun : Gun
             PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
 		}
 
-        audio.PlaySound(audio.playerFireAR[0], 1, 1.5f);
+        audio.PlaySound(audio.playerFireAR[0], 1, 1.5f, 1);
 
         BulletFlash();
 
@@ -93,7 +93,7 @@ public class AutomaticGun : Gun
             if (!PV.IsMine)
             {
                 player.BulletFlash(player.GetComponent<PlayerController>().GetItemIndex());
-                audio.PlaySound(audio.playerFireAR[0], 1, 1.5f);
+                audio.PlaySound(audio.playerFireAR[0], 1, 1.5f, 2);
             }
         }
     }

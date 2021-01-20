@@ -64,7 +64,7 @@ public class AudioManager : MonoBehaviour
         audioSources[j].PlayOneShot(_clip);
     }
 
-    public void PlaySound(AudioClip _clip, float minPitch, float maxPitch)
+    public void PlaySound(AudioClip _clip, float minPitch, float maxPitch, float volume)
     {
         int i = 0;
 
@@ -75,6 +75,8 @@ public class AudioManager : MonoBehaviour
         pitch = Mathf.Clamp(pitch, -3, 3);
 
         audioSources[j].pitch = pitch;
+
+        audioSources[j].volume = volume;
 
         audioSources[j].PlayOneShot(_clip);
     }

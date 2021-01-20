@@ -50,7 +50,7 @@ public class SingleShotGun : Gun
         if (PV.IsMine)
         {
             player.BulletFlash(player.GetComponent<PlayerController>().GetItemIndex());
-            audio.PlaySound(audio.playerFirePistol[0], 1.2f, 1.5f);
+            audio.PlaySound(audio.playerFirePistol[0], 1.2f, 1.5f, 1);
             gunReady = false;
             StartCoroutine(ShootCooldown());
         }
@@ -76,6 +76,8 @@ public class SingleShotGun : Gun
         if (!PV.IsMine)
         {
             player.BulletFlash(player.GetComponent<PlayerController>().GetItemIndex());
+            audio.PlaySound(audio.playerFirePistol[0], 1.2f, 1.5f, 2);
+
             //do audio here
         }
     }
