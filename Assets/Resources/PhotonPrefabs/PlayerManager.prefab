@@ -73,6 +73,7 @@ MonoBehaviour:
   scores: 
   highestScore: 0
   kills: 0
+  lastItemUsed: 0
 --- !u!114 &7444905655974245147
 MonoBehaviour:
   m_ObjectHideFlags: 0

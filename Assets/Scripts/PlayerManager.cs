@@ -24,6 +24,8 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 
     public int kills = 0;
 
+    public int lastItemUsed;
+
 	void Awake()
 	{
 		PV = GetComponent<PhotonView>();
@@ -47,6 +49,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 		controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", PlayerControllerName), spawnpoint.position, spawnpoint.rotation, 0, new object[] { PV.ViewID });
 	}
 
+
 	public void Die(int killerViewID) // for when you get killed by another player
 	{
         if (PV.IsMine)
@@ -54,6 +57,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
             Hashtable hash = new Hashtable();
             hash.Add("killer", killerViewID);
             PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+            lastItemUsed = controller.GetComponent<PlayerController>().ItemIndex();
         }
         //aPV.RPC("RPC_UpdateScores", RpcTarget.All, killerViewID);
         PhotonNetwork.Destroy(controller);
@@ -62,6 +66,10 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 
     public void Die() // for when you kill yourself. There's Currently no penalty for killing yourself
     {
+        if (PV.IsMine)
+        {
+            lastItemUsed = controller.GetComponent<PlayerController>().ItemIndex();
+        }
         PhotonNetwork.Destroy(controller);
         CreateController();
     }

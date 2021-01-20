@@ -16,6 +16,12 @@ public class SpawnManager : MonoBehaviour
 
 	public Transform GetSpawnpoint()
 	{
+        //if(Physics.SphereCast())
 		return spawnpoints[Random.Range(0, spawnpoints.Length)].transform;
 	}
+
+    private int GetSpawnPoint()
+    {
+        return Random.Range(0, spawnpoints.Length);
+    }
 }

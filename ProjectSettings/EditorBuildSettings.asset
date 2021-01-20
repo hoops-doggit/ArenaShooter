@@ -18,12 +18,12 @@ EditorBuildSettings:
     path: Assets/CDB/CDB_Scenes/CDB_Quake_1.unity
     guid: ff8c57305cc28434db9c2e026b7e3bac
   - enabled: 1
-    path: Assets/Scenes/DdB_Game 1.unity
+    path: Assets/DdB/DdB_Game 1.unity
     guid: 97ae637feac674d41b6f2fedcbc29915
   - enabled: 1
     path: Assets/IS/IS_Scenes/IS_ArenaLevel.unity
     guid: a93c9cbda67156342a31f82f2c10a302
   - enabled: 1
-    path: Assets/Scenes/IC_The ira scene.unity
+    path: Assets/IC/IC_The ira scene.unity
     guid: 96846c4b7ecf76d46833c5d3aef56513
   m_configObjects: {}

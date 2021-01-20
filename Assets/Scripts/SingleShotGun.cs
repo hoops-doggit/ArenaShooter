@@ -14,6 +14,7 @@ public class SingleShotGun : Gun
     [SerializeField] Vector3 recoilAmount;
     [SerializeField] float cooldownTime = 0.5f;
 
+
     PhotonView PV;
 
     bool gunReady = true;
@@ -41,8 +42,8 @@ public class SingleShotGun : Gun
 		Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
 		ray.origin = cam.transform.position;
 
-        if (Physics.Raycast(ray, out RaycastHit hit))
-		{
+        if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hit, 500, layerMask, QueryTriggerInteraction.Ignore))
+        {
 			hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage, player.PMViewID());
             PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
 		}
