@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 	{
 		if(PV.IsMine)
 		{
-			EquipItem(playerManager.lastItemUsed);
+			EquipItem(0);
 		}
 		else
 		{
@@ -264,12 +264,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             PhotonNetwork.LocalPlayer.SetCustomProperties(hash);            
         }
 
-        if (items[_itemIndex] is SingleShotGun)
+        if ((SingleShotGun)items[_itemIndex])
         {
             SingleShotGun g = (SingleShotGun)items[_itemIndex];
             g.BulletFlash();
         }
-        else if (items[_itemIndex] is AutomaticGun)
+        else if ((AutomaticGun)items[_itemIndex])
         {
             AutomaticGun g = (AutomaticGun)items[_itemIndex];
             g.BulletFlash();
@@ -280,17 +280,5 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     {
         rb.AddForce(force);
     }
-
-    public int ItemIndex()
-    {
-        return itemIndex;
-    }
-
-    public void SetEquippedItem(int lastUsedItem)
-    {
-        EquipItem(lastUsedItem);
-    }
-
-    
 
 }

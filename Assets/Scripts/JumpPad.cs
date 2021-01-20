@@ -6,6 +6,7 @@ public class JumpPad : MonoBehaviour
 {
 
     List<PlayerController> players = new List<PlayerController>();
+
     [SerializeField] JumpPadStats jps;
 
     private void OnTriggerEnter(Collider other)
@@ -30,9 +31,12 @@ public class JumpPad : MonoBehaviour
         {
             foreach(PlayerController p in players)
             {
-                Vector3 jumpPadForce = transform.up * jps.upForce;
+                if (jps != null)
+                {
+                    Vector3 jumpPadForce = transform.up * jps.upForce;
 
-                p.AddForce(jumpPadForce);
+                    p.AddForce(jumpPadForce);
+                }                
             }
         }
     }

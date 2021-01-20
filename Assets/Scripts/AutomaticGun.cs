@@ -57,7 +57,7 @@ public class AutomaticGun : Gun
         //GameObject bulletImpact = Instantiate(bulletImpactPrefab, ray.origin, Quaternion.identity);
         //bulletImpact.name = "origin";
 
-        if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hit, 500, layerMask, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(ray, out RaycastHit hit))
 		{
 			hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage, player.PMViewID());
             PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
