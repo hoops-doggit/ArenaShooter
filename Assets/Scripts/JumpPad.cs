@@ -9,6 +9,20 @@ public class JumpPad : MonoBehaviour
 
     [SerializeField] JumpPadStats jps;
 
+
+    private void Awake()
+    {
+        if(jps == null)
+        {
+            jps = GetComponentInParent<JumpPadStats>();
+        }
+
+        if(jps == null)
+        {
+            transform.parent.gameObject.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")

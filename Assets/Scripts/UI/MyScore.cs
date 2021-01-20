@@ -8,6 +8,7 @@ using TMPro;
 public class MyScore : MonoBehaviourPunCallbacks
 {
     [SerializeField] PlayerController controller;
+    [SerializeField] PhotonView PV;
 
     TextMeshPro myScore;
 
@@ -24,14 +25,12 @@ public class MyScore : MonoBehaviourPunCallbacks
         myScore.text = PM.GetKills().ToString();
     }
 
-    public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
+    private void Update()
     {
-        if (changedProps.ContainsKey("killer"))
+        if (PV.IsMine)
         {
-            if((int)changedProps["killer"] == PM.PVViewID)
-            {
-                myScore.text = PM.GetKills().ToString();
-            }            
+            myScore.text = PM.GetKills().ToString();
         }
     }
+
 }

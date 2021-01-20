@@ -13,7 +13,11 @@ public class AutomaticGun : Gun
 
     [Header("Customization")]
     [SerializeField] GameObject bulletFlash;
-    [SerializeField] float timeBetweenBullets = 0.01f;
+    [SerializeField] float timeBetweenBullets = 0.1f;
+    [SerializeField] Transform reloadAnimTarget;
+    [SerializeField] Transform reloadAnimGoal;
+    private Vector3 startPos;
+    private float reloadAnimTimer = 0;
 
     [Header("Recoil Settings")]
     [SerializeField] RecoilController recoilControl;
@@ -26,6 +30,7 @@ public class AutomaticGun : Gun
     private void Awake()
     {
         PV = GetComponent<PhotonView>();
+        startPos = reloadAnimTarget.localPosition;
     }
 
     public override void Use()
@@ -48,6 +53,13 @@ public class AutomaticGun : Gun
                 Shoot();
             }
         }
+
+        if(reloadAnimTimer < timeBetweenBullets)
+        {
+            Vector3 goalPos = reloadAnimGoal.localPosition;
+            reloadAnimTarget.localPosition = Vector3.Lerp(goalPos, startPos, reloadAnimTimer/timeBetweenBullets);
+            reloadAnimTimer += Time.deltaTime;
+        }
     }
 
     void Shoot()
@@ -57,8 +69,8 @@ public class AutomaticGun : Gun
         //GameObject bulletImpact = Instantiate(bulletImpactPrefab, ray.origin, Quaternion.identity);
         //bulletImpact.name = "origin";
 
-        if (Physics.Raycast(ray, out RaycastHit hit))
-		{
+        if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hit, 500, layerMask, QueryTriggerInteraction.Ignore))
+        {
 			hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage, player.PMViewID());
             PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
 		}
@@ -68,6 +80,7 @@ public class AutomaticGun : Gun
         BulletFlash();
 
         canShoot = false;
+        reloadAnimTimer = 0;
 
         StartCoroutine(ShootCooldown());
 	}

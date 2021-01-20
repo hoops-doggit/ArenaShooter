@@ -7,7 +7,6 @@ public class DeathMatchScoreLimit : MonoBehaviour
 {
     TextMeshPro scoreLimitText;
 
-
     void Start()
     {
         scoreLimitText = GetComponent<TextMeshPro>();

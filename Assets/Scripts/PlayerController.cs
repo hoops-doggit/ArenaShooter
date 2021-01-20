@@ -281,4 +281,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         rb.AddForce(force);
     }
 
+    public float GetHealth()
+    {
+        return currentHealth;
+    }
+
 }

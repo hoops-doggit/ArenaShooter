@@ -11,19 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JG/JG_Scenes/JG_Arena.unity
     guid: 15ac9239e282ded4389eb82e27054d86
-  - enabled: 1
-    path: Assets/DdB_Devon/DdB_Scenes/DdB_Game 1.unity
-    guid: 28e5576eb22dcc04f89f01b5f9d09355
-  - enabled: 1
-    path: Assets/IS/IS_Test level/IS_Scenes/IS_ArenaLevel2.unity
-    guid: de69c40d48c57af4999cb46e5b5db29b
-  - enabled: 1
-    path: Assets/BS/BS_Scenes/BS_Arena.unity
-    guid: d0e2070c757d5b349aec4ae9bc049191
-  - enabled: 1
-    path: Assets/IC/IC_The ira scene.unity
-    guid: 5642c79087d8f934981e7985299287f2
-  - enabled: 1
-    path: Assets/CDB/CDB_Scenes/CDB_Quake_1.unity
-    guid: ff8c57305cc28434db9c2e026b7e3bac
   m_configObjects: {}

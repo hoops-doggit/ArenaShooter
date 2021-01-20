@@ -8,4 +8,6 @@ public abstract class Gun : Item
 	public abstract override void StopUsing();
 
     public GameObject bulletImpactPrefab;
+
+    [SerializeField] protected LayerMask layerMask;
 }
