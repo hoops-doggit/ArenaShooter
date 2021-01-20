@@ -76,6 +76,7 @@ public class SingleShotGun : Gun
         if (!PV.IsMine)
         {
             player.BulletFlash(player.GetComponent<PlayerController>().GetItemIndex());
+            //do audio here
         }
     }
 

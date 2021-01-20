@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
+
     List<PlayerController> players = new List<PlayerController>();
-    public float upForce = 15;
+
+    [SerializeField] JumpPadStats jps;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,15 +25,18 @@ public class JumpPad : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(players.Count > 0)
         {
             foreach(PlayerController p in players)
             {
-                Vector3 jumpPadForce = Vector3.up * upForce;
+                if (jps != null)
+                {
+                    Vector3 jumpPadForce = transform.up * jps.upForce;
 
-                p.AddForce(jumpPadForce);
+                    p.AddForce(jumpPadForce);
+                }                
             }
         }
     }

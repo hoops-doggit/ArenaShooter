@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454230484}
   - component: {fileID: 454230483}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7578286377594255144}
   - component: {fileID: 5401790561773994722}
   - component: {fileID: 493730500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ScoreLimit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7973566627211227981}
   - component: {fileID: 2102702147579238645}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196200955004394687}
   - component: {fileID: 8336986222409274520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5329463837997900205}
   - component: {fileID: 8274421597580464973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 1970276063396336638}
   - component: {fileID: 4055254008413955260}
   - component: {fileID: 5805424986738382027}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6435644628437115277}
   - component: {fileID: 4033709785805529042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Recoil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1062737984407870201}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 6849211531350040373}
   - component: {fileID: 7545825978882867545}
   - component: {fileID: 8756238222273031693}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -834,7 +834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867887824741663252}
   - component: {fileID: 4660701934033494659}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 3621676707997488713}
   - component: {fileID: 7698679297366316897}
   - component: {fileID: 3743853294481986517}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3048678770287682482}
   - component: {fileID: 4498584547936325372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 7176020527576977938}
   - component: {fileID: 4768823641083014250}
   - component: {fileID: 161792877622127636}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 3990070107707649405}
   - component: {fileID: 1165431798009582276}
   - component: {fileID: 7009553175335607401}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1296,7 +1296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5041360095755071811}
   - component: {fileID: 531825575750104166}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 1488053957094389952}
   - component: {fileID: 1488053957094389953}
   - component: {fileID: 5602152071382711701}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1577,7 +1577,7 @@ GameObject:
   - component: {fileID: 5353915076702350881}
   - component: {fileID: 3173820623740129246}
   - component: {fileID: 8997055070651253307}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1750,7 +1750,7 @@ GameObject:
   - component: {fileID: 6640256043801636565}
   - component: {fileID: 8427870456190720481}
   - component: {fileID: 360680916}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MyScoreTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1932,7 +1932,7 @@ GameObject:
   - component: {fileID: 8962659361390461022}
   - component: {fileID: 1273605210699537904}
   - component: {fileID: 387063702068220007}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2013,7 +2013,7 @@ GameObject:
   - component: {fileID: 3866847129437191569}
   - component: {fileID: 8055906769317899356}
   - component: {fileID: 3165595823335960440}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2094,7 +2094,7 @@ GameObject:
   - component: {fileID: 6775497587532438626}
   - component: {fileID: 6994569925246575280}
   - component: {fileID: 2533524797670910826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2176,7 +2176,7 @@ GameObject:
   - component: {fileID: 3580393865979673915}
   - component: {fileID: 4224592692392252719}
   - component: {fileID: 3895804966119566958}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HighestScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2358,7 @@ GameObject:
   - component: {fileID: 9197002103543122533}
   - component: {fileID: 8681207388441761672}
   - component: {fileID: 2043304087019274673}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2437,7 +2437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3218887557126065164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PistolObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2477,7 +2477,7 @@ GameObject:
   - component: {fileID: 3463762241776707429}
   - component: {fileID: 7725489350837385226}
   - component: {fileID: 2746387582366794397}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2556,7 +2556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800001798413963843}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ItemHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2590,7 +2590,7 @@ GameObject:
   - component: {fileID: 3941484365737582408}
   - component: {fileID: 1090922305210785830}
   - component: {fileID: 6776082527559945918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2670,7 +2670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519496483344220603}
   - component: {fileID: 4722067466663837794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Reticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2753,7 +2753,7 @@ GameObject:
   - component: {fileID: 7141994752483960072}
   - component: {fileID: 2906052505451371620}
   - component: {fileID: 6824878317304844944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2834,7 +2834,7 @@ GameObject:
   - component: {fileID: 7894238123186725528}
   - component: {fileID: 5242151483471383418}
   - component: {fileID: 408547913939711718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2913,7 +2913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 164120191410481355}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2951,7 +2951,7 @@ GameObject:
   - component: {fileID: 6312753451146017958}
   - component: {fileID: 8291887081472147377}
   - component: {fileID: 4928482352683839600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3032,7 +3032,7 @@ GameObject:
   - component: {fileID: 2507645221745527282}
   - component: {fileID: 3392446636405591773}
   - component: {fileID: 3455779554224992164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3113,7 @@ GameObject:
   - component: {fileID: 1676132140338284414}
   - component: {fileID: 3968076902418886796}
   - component: {fileID: 8662121638514316036}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3152,6 +3152,9 @@ MonoBehaviour:
   itemGameObject: {fileID: 2872424139362127188}
   bulletImpactPrefab: {fileID: 3435945156843107947, guid: 1bca3ca3555a1624cb0c2199e7a7dfd0,
     type: 3}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 3383
   cam: {fileID: 1488053957094389952}
   player: {fileID: 8997055070651253307}
   bulletFlash: {fileID: 4165913369286355421}
@@ -3192,7 +3195,7 @@ GameObject:
   - component: {fileID: 2845160347044837971}
   - component: {fileID: 6549113340849748812}
   - component: {fileID: 4933657619839735112}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3273,7 +3276,7 @@ GameObject:
   - component: {fileID: 1799142062113034878}
   - component: {fileID: 2363147439433389964}
   - component: {fileID: 8731895834949461062}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3354,7 +3357,7 @@ GameObject:
   - component: {fileID: 4166731149871997399}
   - component: {fileID: 3559982637530665555}
   - component: {fileID: 4971561865797003836}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3435,7 +3438,7 @@ GameObject:
   - component: {fileID: 7747241574577233}
   - component: {fileID: 6476202364131007829}
   - component: {fileID: 244869667987285931}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3516,7 +3519,7 @@ GameObject:
   - component: {fileID: 8307574998637895208}
   - component: {fileID: 2370268100367963476}
   - component: {fileID: 5786727232226843389}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3597,7 +3600,7 @@ GameObject:
   - component: {fileID: 6698525692380570124}
   - component: {fileID: 6541283778517449084}
   - component: {fileID: 722052707574912978}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3676,7 +3679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6859647364140423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RifleObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3719,7 +3722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8913202309253582004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3754,7 +3757,7 @@ GameObject:
   - component: {fileID: 4555694380609431497}
   - component: {fileID: 548637358696156910}
   - component: {fileID: 3226336938329748391}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3834,7 +3837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017414659911714401}
   - component: {fileID: 4988825728382675625}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3962,7 +3965,7 @@ GameObject:
   - component: {fileID: 661285188742022458}
   - component: {fileID: 5678968710707358938}
   - component: {fileID: 8230715201347760104}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4023,6 +4026,9 @@ MonoBehaviour:
   itemGameObject: {fileID: 6141460071634955227}
   bulletImpactPrefab: {fileID: 3435945156843107947, guid: e4a015696fcdf64468098aca361da35e,
     type: 3}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 3383
   cam: {fileID: 1488053957094389952}
   player: {fileID: 8997055070651253307}
   audio: {fileID: 454230483}
@@ -4041,7 +4047,7 @@ GameObject:
   - component: {fileID: 966600940851954985}
   - component: {fileID: 3034849412348501017}
   - component: {fileID: 5517385881907222220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4122,7 +4128,7 @@ GameObject:
   - component: {fileID: 6354371385734530354}
   - component: {fileID: 8406365803077536760}
   - component: {fileID: 1943356519141937805}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4203,7 +4209,7 @@ GameObject:
   - component: {fileID: 4757020086594345539}
   - component: {fileID: 2297169208375499203}
   - component: {fileID: 4535026153400904542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4283,7 +4289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8212040590785474652}
   - component: {fileID: 3545617076697837539}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4410,7 +4416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7481539097388593907}
   - component: {fileID: 4573277315661169004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4538,7 +4544,7 @@ GameObject:
   - component: {fileID: 3044467626715756941}
   - component: {fileID: 1319911992299414565}
   - component: {fileID: 1286689216672543585}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4619,7 +4625,7 @@ GameObject:
   - component: {fileID: 2628601708658756869}
   - component: {fileID: 1004915795230844748}
   - component: {fileID: 1889534172633182262}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4699,7 +4705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2720387205384706216}
   - component: {fileID: 460378824278444911}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4827,7 +4833,7 @@ GameObject:
   - component: {fileID: 2752236524713206784}
   - component: {fileID: 1163500423309825918}
   - component: {fileID: 6501733569141301656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4908,7 +4914,7 @@ GameObject:
   - component: {fileID: 1986329049665424680}
   - component: {fileID: 4514803419330355094}
   - component: {fileID: 736325303745666581}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4988,7 +4994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3705149095276144607}
   - component: {fileID: 7861727051050708373}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5116,7 +5122,7 @@ GameObject:
   - component: {fileID: 6708086195980860953}
   - component: {fileID: 1724003690732349599}
   - component: {fileID: 1991468785799653396}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5197,7 +5203,7 @@ GameObject:
   - component: {fileID: 1052864893292349198}
   - component: {fileID: 3388381792301718849}
   - component: {fileID: 5712246775092545340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5277,7 +5283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3577564529036895685}
   - component: {fileID: 1403261449152594632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AudioSource (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5405,7 +5411,7 @@ GameObject:
   - component: {fileID: 1628165950486169727}
   - component: {fileID: 4110569433707877971}
   - component: {fileID: 6751833802378420331}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5486,7 +5492,7 @@ GameObject:
   - component: {fileID: 1042568670548963138}
   - component: {fileID: 6343048021322589189}
   - component: {fileID: 4178800783140242158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

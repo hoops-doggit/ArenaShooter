@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88b2834336b6f8b458001a8d1a9d8f38, type: 2}
+  - {fileID: 2100000, guid: 77acec5fab9ac7d4492b1f9713c3546c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,8 +90,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 872648446172465780}
+  - component: {fileID: 6590978700943695185}
   m_Layer: 0
-  m_Name: JumpPad
+  m_Name: JG_JumpPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872648446172465781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -2.027, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 872648445540562381}
@@ -114,6 +115,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6590978700943695185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872648446172465781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbaebba122e9714c8d1889761ce7334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upForce: 15
 --- !u!1 &4830360151497668490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5053,4 +5067,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4c457ee99f760479c6808e2b8c938a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
+  jps: {fileID: 0}
