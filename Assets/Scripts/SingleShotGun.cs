@@ -13,6 +13,7 @@ public class SingleShotGun : Gun
     [SerializeField] RecoilController recoil;
     [SerializeField] Vector3 recoilAmount;
     [SerializeField] float cooldownTime = 0.5f;
+    [SerializeField] AmmoCount ammoCountUI;
 
     PhotonView PV;
 

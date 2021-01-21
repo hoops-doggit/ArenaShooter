@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] playerJump;
     public AudioClip[] playerLand;
     public AudioClip[] playerTakeDamage;
-    public AudioClip[] playerWalkStep;
+    public AudioClip[] playerHitReg;
     public AudioClip[] enemyDeath;
     public AudioClip[] enemyTakeDamage;
 

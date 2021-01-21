@@ -36,8 +36,6 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 		{
 			CreateController();
             Cursor.lockState = CursorLockMode.Locked;
-
-            //AddPlayerStats(PVViewID);
         }        
     }
 

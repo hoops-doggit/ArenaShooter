@@ -41,7 +41,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         playerManagerViewID = playerManager.PVViewID;
 	}
 
-	void Start()
+
+    void Start()
 	{
 		if(PV.IsMine)
 		{
@@ -171,6 +172,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		}
 
 		previousItemIndex = itemIndex;
+
+        if(items[itemIndex] is AutomaticGun)
+        {
+            ((AutomaticGun)items[itemIndex]).UpdateRoundsRemaining();
+        }
 
 		if(PV.IsMine)
 		{

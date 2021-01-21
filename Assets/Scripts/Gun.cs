@@ -9,5 +9,5 @@ public abstract class Gun : Item
 
     public GameObject bulletImpactPrefab;
 
-    [SerializeField] protected LayerMask layerMask;
+    [SerializeField] protected LayerMask layerMask; //this could be removed later
 }
