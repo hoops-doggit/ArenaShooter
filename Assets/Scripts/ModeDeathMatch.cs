@@ -15,7 +15,6 @@ public class ModeDeathMatch : MonoBehaviourPun
 
     private void Awake()
     {
-
         if (Instance)
         {
             Destroy(gameObject);
@@ -23,7 +22,6 @@ public class ModeDeathMatch : MonoBehaviourPun
         }
 
         Instance = this;        
-
 
         PV = GetComponent<PhotonView>();
     }

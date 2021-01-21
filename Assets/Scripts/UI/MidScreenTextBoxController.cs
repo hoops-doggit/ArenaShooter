@@ -23,6 +23,10 @@ public class MidScreenTextBoxController : MonoBehaviour
             textObject.text = startText;
             Invoke("EraseText", 3);
         }
+        else
+        {
+            EraseText();
+        }
     }
 
     // Update is called once per frame

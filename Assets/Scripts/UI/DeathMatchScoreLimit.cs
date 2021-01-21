@@ -10,6 +10,10 @@ public class DeathMatchScoreLimit : MonoBehaviour
     void Start()
     {
         scoreLimitText = GetComponent<TextMeshPro>();
-        scoreLimitText.text = ModeDeathMatch.Instance.GetScoreLimit().ToString();
+        if(ModeDeathMatch.Instance != null)
+        {
+            scoreLimitText.text = ModeDeathMatch.Instance.GetScoreLimit().ToString();
+
+        }
     }
 }

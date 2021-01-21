@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
-using Hashtable = ExitGames.Client.Photon.Hashtable;
 using TMPro;
-public class MyScore : MonoBehaviourPunCallbacks
+public class MyScore : BouncyUi
 {
     [SerializeField] PlayerController controller;
     [SerializeField] PhotonView PV;
+    [SerializeField] float bounceDuration;
+    [SerializeField] float bounceAmount;
+    private int kills;
+    private int previousKills;
+
 
     TextMeshPro myScore;
 
@@ -29,8 +32,14 @@ public class MyScore : MonoBehaviourPunCallbacks
     {
         if (PV.IsMine)
         {
-            myScore.text = PM.GetKills().ToString();
-        }
+            previousKills = kills;
+            kills = PM.GetKills();
+            if(previousKills < kills)
+            {
+                myScore.text = kills.ToString();
+                BounceUI(bounceDuration, bounceAmount);
+            }            
+        }        
     }
 
 }
