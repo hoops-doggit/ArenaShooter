@@ -5354,7 +5354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManagers:
-  - PlayerManagerCDB
+  - PlayerManager1
   - PlayerManager
   - PlayerManager
   - PlayerManager

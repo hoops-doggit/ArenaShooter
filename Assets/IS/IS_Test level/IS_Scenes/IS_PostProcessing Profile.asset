@@ -159,10 +159,10 @@ MonoBehaviour:
     value: 3.27
   color:
     overrideState: 1
-    value: {r: 0.39922795, g: 0.3411765, b: 1, a: 1}
+    value: {r: 0.117112495, g: 0.06755074, b: 0.6226415, a: 1}
   ambientOnly:
     overrideState: 1
-    value: 1
+    value: 0
   noiseFilterTolerance:
     overrideState: 0
     value: 0
@@ -242,8 +242,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   colorFilter:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 1
+    value: {r: 0.45817015, g: 0.6450247, b: 0.9811321, a: 1}
   hueShift:
     overrideState: 0
     value: 0
@@ -261,37 +261,37 @@ MonoBehaviour:
     value: 0
   mixerRedOutRedIn:
     overrideState: 1
-    value: 115
+    value: 200
   mixerRedOutGreenIn:
     overrideState: 0
     value: 0
   mixerRedOutBlueIn:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 20
   mixerGreenOutRedIn:
     overrideState: 1
-    value: 3
+    value: 75
   mixerGreenOutGreenIn:
     overrideState: 0
     value: 100
   mixerGreenOutBlueIn:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 72
   mixerBlueOutRedIn:
     overrideState: 1
-    value: 6
+    value: 15
   mixerBlueOutGreenIn:
     overrideState: 0
     value: 0
   mixerBlueOutBlueIn:
-    overrideState: 0
-    value: 100
+    overrideState: 1
+    value: 200
   lift:
     overrideState: 1
-    value: {x: 0.7197124, y: 0.6596353, z: 1, w: 0.65911436}
+    value: {x: 0.85905945, y: 0.86720794, z: 1, w: 0.65911436}
   gamma:
     overrideState: 1
-    value: {x: 0.675029, y: 0.5640174, z: 1, w: -0.061791964}
+    value: {x: 1, y: 0.037038263, z: 0, w: -0.061791964}
   gain:
     overrideState: 1
     value: {x: 0.62436837, y: 0.6060701, z: 1, w: 0.08238931}

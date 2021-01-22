@@ -5784,7 +5784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  scoreLimit: -1
+  scoreLimit: 20
 --- !u!4 &1583848217
 Transform:
   m_ObjectHideFlags: 0
