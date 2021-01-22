@@ -19,6 +19,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 	[SerializeField] GameObject PlayerListItemPrefab;
 	[SerializeField] GameObject startGameButton;
     List<RoomInfo> fullRoomList = new List<RoomInfo>();
+    [SerializeField] List<string> names;
     public int arenaToLoad;
     void Awake()
 	{
@@ -42,8 +43,14 @@ public class Launcher : MonoBehaviourPunCallbacks
 	{
 		MenuManager.Instance.OpenMenu("title");
 		Debug.Log("Joined Lobby");
-		PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000");
+		//PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000");
+		PhotonNetwork.NickName = GetRandomName();
 	}
+
+    private string GetRandomName()
+    {
+        return names[Random.Range(0, names.Count)];
+    }
 
 	public void CreateRoom()
 	{

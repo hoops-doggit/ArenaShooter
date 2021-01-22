@@ -121,9 +121,14 @@ public class AutomaticGun : Gun
         }
         else
         {
-            StartCoroutine(ReloadMag());
+            Reload();
         }
 	}
+
+    public void Reload()
+    {
+        StartCoroutine(ReloadMag());
+    }
 
     IEnumerator ReloadMag()
     {

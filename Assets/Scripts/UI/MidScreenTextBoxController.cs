@@ -15,7 +15,9 @@ public class MidScreenTextBoxController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            textObject = GetComponent<TextMeshPro>();
+        textObject = GetComponent<TextMeshPro>();
+
+        player.GetPlayerManager().SetMiddleTextBox(textObject);
 
         if (player.GetPlayerManager().kills < 1)
         {

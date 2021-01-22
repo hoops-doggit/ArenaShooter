@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
 	float verticalLookRotation;
 	bool grounded;
+    bool walled = false;
 	Vector3 smoothMoveVelocity;
 	Vector3 moveAmount;
 
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
 	PhotonView PV;
 
-	const float maxHealth = 100f;
+	const float maxHealth = 120f;
 	float currentHealth = maxHealth;
 
 	PlayerManager playerManager;
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		Move();
 		Jump();
         Escape();
+        Reload();
 
 		for(int i = 0; i < items.Length; i++)
 		{
@@ -148,6 +150,22 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         }
     }
 
+    
+
+    void Reload()
+    {
+        Rigidbody col = new Rigidbody();
+
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if(items[itemIndex] is AutomaticGun)
+            {
+                ((AutomaticGun)items[itemIndex]).Reload();
+            }
+        }
+    }
+
     IEnumerator LoadMainMenu()
     {
         yield return new WaitForSeconds(1);
@@ -211,8 +229,20 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		if(!PV.IsMine)
 			return;
 
-		rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+        if (!walled)
+        {
+		    rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+        }
+        else
+        {
+            walled = false;
+        }
 	}
+
+    public void SetWalled()
+    {
+        walled = true;
+    }
 
 	public void TakeDamage(float damage, int photonViewID)
 	{

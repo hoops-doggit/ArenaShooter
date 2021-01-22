@@ -5575,6 +5575,57 @@ MonoBehaviour:
   PlayerListItemPrefab: {fileID: 1878336002063414184, guid: d11edb5dbb901db49a659dace16ad395,
     type: 3}
   startGameButton: {fileID: 740400222}
+  names:
+  - rat
+  - Dingus
+  - Joe
+  - hipster
+  - bycicle
+  - Top20BabyNames
+  - Olivia
+  - Oliver
+  - name
+  - soccerBall
+  - badmintonRaquet69
+  - boring old rock
+  - theRock
+  - cabinet
+  - FilingCabinet
+  - Pidgeotto
+  - camero
+  - noname420
+  - heart
+  - MeatLoafer
+  - Wedon'tHaveEnoughtNames
+  - Ira
+  - Jacob
+  - Brandon
+  - Conner
+  - Isabel
+  - Devon
+  - George
+  - Noah
+  - Ava
+  - Chair
+  - Crunch
+  - BowelingBawal
+  - teleporter
+  - turtle
+  - teleTuBS
+  - THECABLE
+  - Keyboard
+  - IbuyWallHacksSoSueMe
+  - LowQuality
+  - QualiT
+  - HighMaintenance
+  - TheTaBlaller
+  - e b o l a
+  - Garfield
+  - 31N5T13N
+  - hippopottomonstophobia
+  - slkdflskdjfl
+  - ludectrophobia
+  - 50
   arenaToLoad: 1
 --- !u!114 &2125027183
 MonoBehaviour:

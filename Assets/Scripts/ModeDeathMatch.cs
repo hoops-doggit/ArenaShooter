@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-public class ModeDeathMatch : MonoBehaviourPun
+using Photon.Realtime;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
+public class ModeDeathMatch : MonoBehaviourPunCallbacks
 {
     public static ModeDeathMatch Instance;
     public List<PlayerStats> players = new List<PlayerStats>();
 
-    [SerializeField] int scoreLimit = 25;
-
+    [SerializeField] int scoreLimit = 40;
 
 
     PhotonView PV;
@@ -25,6 +26,8 @@ public class ModeDeathMatch : MonoBehaviourPun
 
         PV = GetComponent<PhotonView>();
     }
+
+
 
     public void AddPlayer(string myName)
     {

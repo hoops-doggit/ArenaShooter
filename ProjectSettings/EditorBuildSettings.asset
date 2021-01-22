@@ -13,16 +13,16 @@ EditorBuildSettings:
     guid: 7108ed122ebd7f845acb43c972eedbf6
   - enabled: 1
     path: Assets/BS/BS_Scenes/BS_Arena_New.unity
-    guid: 0951e05693223ae4c83f519302869c51
-  - enabled: 1
-    path: Assets/DdB_Devon/DdB_Scenes/DdB_Game 1.unity
-    guid: af5fe1a7805a4af4e9a82fcdbbb43418
+    guid: 63bff881cfe797d44a9ee4412e9607cd
   - enabled: 1
     path: Assets/IC/IC_The ira scene.unity
     guid: ee20a5ab1c380ff40a5ea33b6fcaacce
   - enabled: 1
     path: Assets/IS/IS_Test level/IS_Scenes/IS_Arena02.unity
     guid: ab0c8b7da8ec76149ad162c03c2748e7
+  - enabled: 1
+    path: Assets/DdB_Devon/DdB_Scenes/DdB_Game 1.unity
+    guid: 20879c82c2bc8a144b8397ecf6a6871a
   - enabled: 1
     path: Assets/JG/JG_Scenes/JG_Arena.unity
     guid: 15ac9239e282ded4389eb82e27054d86

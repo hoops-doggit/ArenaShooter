@@ -72,6 +72,7 @@ MonoBehaviour:
   players: 
   scores: 
   highestScore: 0
+  IDofHighestScore: 0
   kills: 0
 --- !u!114 &7444905655974245147
 MonoBehaviour:
