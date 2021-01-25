@@ -1,6 +1,6 @@
 # Level Design Short Course - Arena Shooter
 
-Levels designed by Isabel, Brandon, Connor, Devon and Ira!
+Levels designed by Isabel, Brendon, Connor, Devon and Ira!
 
 Programming and design by me!
 
