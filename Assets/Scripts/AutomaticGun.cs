@@ -72,7 +72,10 @@ public class AutomaticGun : Gun
         {
             if (canShoot)
             {
-                Shoot();
+                if (!reloading)
+                {
+                    Shoot();
+                }
             }
         }
 
@@ -127,18 +130,22 @@ public class AutomaticGun : Gun
 
     public void Reload()
     {
-        StartCoroutine(ReloadMag());
+        if (!reloading)
+        {
+            StartCoroutine(ReloadMag());
+        }
     }
 
     IEnumerator ReloadMag()
     {
-
+        reloading = true;
         reloadingText.SetActive(true);
         yield return new WaitForSeconds(reloadMagDuration);
         roundsRemaining = ((GunInfo)itemInfo).magSize;
         UpdateRoundsRemaining();
         reloadingText.SetActive(false);
         canShoot = true;
+        reloading = false;
     }
 
     IEnumerator ShootCooldown()

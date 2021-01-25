@@ -154,9 +154,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     void Reload()
     {
-        Rigidbody col = new Rigidbody();
-
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             if(items[itemIndex] is AutomaticGun)
