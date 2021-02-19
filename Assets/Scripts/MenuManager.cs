@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameAnalyticsSDK;
 
 public class MenuManager : MonoBehaviour
 {
@@ -13,7 +14,12 @@ public class MenuManager : MonoBehaviour
 		Instance = this;
 	}
 
-	public void OpenMenu(string menuName)
+    private void Start()
+    {
+        GameAnalytics.Initialize();
+    }
+
+    public void OpenMenu(string menuName)
 	{
 		for(int i = 0; i < menus.Length; i++)
 		{
