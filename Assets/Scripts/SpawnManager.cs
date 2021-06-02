@@ -27,7 +27,7 @@ public class SpawnManager : MonoBehaviour
 
         for(int i = spawnIndex; i< spawnpoints.Length; i++)
         {
-            Collider[] colliders = Physics.OverlapSphere(spawnpoints[i].transform.position, 3.5f);
+            Collider[] colliders = Physics.OverlapSphere(spawnpoints[i].transform.position, 5f);
 
             if (colliders.Length != 0)
             {
