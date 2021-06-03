@@ -75,11 +75,11 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _SunAlpha: 550
+    - _SunAlpha: 149.05
     - _SunAltitude: 38
     - _SunAzimuth: 20
-    - _SunBeta: 1
-    - _SunIntensity: 25.2
+    - _SunBeta: 224.6
+    - _SunIntensity: 83.46
     - _UVSec: 0
     - _UpVectorPitch: 0
     - _UpVectorYaw: 0
@@ -89,9 +89,9 @@ Material:
     - _Color1: {r: 0, g: 0.735849, b: 0.5565245, a: 0}
     - _Color2: {r: 0.8927527, g: 0, b: 0.9150943, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SkyColor1: {r: 0.5909345, g: 0.5740471, b: 0.7294118, a: 0}
-    - _SkyColor2: {r: 0.19344072, g: 0.45609877, b: 0.5943396, a: 0}
-    - _SkyColor3: {r: 0.80549324, g: 0.67287844, b: 0.8784314, a: 0}
+    - _SkyColor1: {r: 0.9622642, g: 0.52198297, b: 0.52845776, a: 0}
+    - _SkyColor2: {r: 0.77254903, g: 0.42352942, b: 0.4668295, a: 0}
+    - _SkyColor3: {r: 0.35959285, g: 0.33121568, b: 0.40392157, a: 0}
     - _SunColor: {r: 0.93333334, g: 0.2705882, b: 0.29503435, a: 1}
     - _SunVector: {r: 0.26951554, g: 0.6156615, b: 0.74048793, a: 0}
     - _UpVector: {r: 0, g: 1, b: 0, a: 0}
