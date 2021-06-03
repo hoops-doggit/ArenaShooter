@@ -11,19 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JG/JG_Scenes/JG_Columnade.unity
     guid: 31dce58466c88e94791c4fedd5d950e7
-  - enabled: 1
-    path: Assets/CF/CF_Scenes/CF_Arena.unity
-    guid: 4620df13414929142920d3a96b2d2345
-  - enabled: 1
-    path: Assets/DW/DW_Scenes/DW_Scene.unity
-    guid: a024555f9cc021540b02e224b3897d52
-  - enabled: 1
-    path: Assets/IS/IS_Test level/IS_Scenes/IS_Arena02.unity
-    guid: ab0c8b7da8ec76149ad162c03c2748e7
-  - enabled: 1
-    path: Assets/JV/JV_Scenes/JV_Scene1.unity
-    guid: ca5bf9ce3590f8847b92ff1a5c771a2d
-  - enabled: 1
-    path: Assets/KH/KH_Scenes/KH.unity
-    guid: 4342d98e73252f44aa0ccbfea40497e5
   m_configObjects: {}
