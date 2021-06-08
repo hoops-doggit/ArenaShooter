@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class SpawnManager : MonoBehaviour
 {
 	public static SpawnManager Instance;
 
 	Spawnpoint[] spawnpoints;
+    Spawnpoint tmp;
 
 	void Awake()
 	{
@@ -19,15 +21,29 @@ public class SpawnManager : MonoBehaviour
        return spawnpoints[index].transform;
 	}
 
+    public void ShuffleSpawnpoints()
+    {
+        for (int i = 0; i < spawnpoints.Length - 1; i++)
+        {
+            int rnd = Random.Range(i, spawnpoints.Length);
+            tmp = spawnpoints[rnd];
+            spawnpoints[rnd] = spawnpoints[i];
+            spawnpoints[i] = tmp;
+        }
+    }
+
 
     public int GetValidSpawnPointIndex()
     {
         bool canSpawn = true;
-        int spawnIndex = Random.Range(0, spawnpoints.Length); 
+        int spawnIndex = 0;
 
-        for(int i = spawnIndex; i< spawnpoints.Length; i++)
+        ShuffleSpawnpoints();
+
+        for(int i = 0; i< spawnpoints.Length; i++)
         {
             Collider[] colliders = Physics.OverlapSphere(spawnpoints[i].transform.position, 5f);
+            spawnIndex = i;
 
             if (colliders.Length != 0)
             {
